@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <h1>Docker</h1>
+        <div>
+        <p>
+            Subsistema de virtualización que comparte con el anfitrión el kernel y el sistema de archivos.
+            El anfitrión siempre es un sistema LInux. Si estamos en WIndows o MAC, necesitaré una maquina virtual Windows virtualizada con VirtualBox o similar.
+        </p>
+        <p>
+            Un software de maquinas virtuales necesita instalar el sistema operativo completo. Ejemplos de sistemas de virtualización: 
+        </p>   
+            <ul>
+                <li>Virtualbox (para multiples plataformas)</li>
+                <li>Hyper-V (para Windows)</li>
+                <li>Parallels (para MAC)</li>
+                <li>VMare (para multiples plataformas)</li>
+                <li>Qemu (para Linux)</li>
+                <li>XEN (para UNIX/LInux)</li>
+                <li>KUM (para UNIX/LInux)</li>
+            </ul>
+        <p>
+            Un software de contenedores es un sistema de virtualización que comparte el kernel con el anfitrión. Se basa en el concepto de microservicio, donde tengo todos los programas instalados, configurados y funcionando, gracias a los contenedores.
+            Ejemplo de software de contenedores: 
+        </p>
+            <ul>
+                <li>Docker</li>
+                <li>LXD</li>
+                <li>Kubernetes</li>
+            </ul>
+            <p>
+                <img src="img/" alt="Docker vs Maquinas virtual">
+            </p>
+        </p>
+        <p>
+            Para saber más sobre el tema:
+        </p>
+            <ul>
+                <li><a href="https://www.docker.com/">Web oficial de Docker</a></li>
+                <li><a href="https://hub.docker.com/">Docker hub (listado contenedores)</a></li>
+                <li><a href="https://docs.docker.com/get-started/">Tutorial de Docker</a></li>
+            </ul>
+    </div>
+    </div>
+    <div id="dockerfile">
+        <h2>Dockerfile</h2>
+        <p>
+            Un <span class="destacado">Dockerfile</span> es una receta para crear una imagen para una aplicación particular de Docker. De este modo podemos tomar una imagen base, instalarle programas, configurar esos programas y dejarla preparada para crear contenedores a partir de ella.
+        </p>
+    </div>
+</body>
+</html>
