@@ -1,62 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-
-    <div>
-        <h1>Docker</h1>
-        <div>
-        <p>
-            Subsistema de virtualización que comparte con el anfitrión el kernel y el sistema de archivos.
-            El anfitrión siempre es un sistema LInux. Si estamos en WIndows o MAC, necesitaré una maquina virtual Windows virtualizada con VirtualBox o similar.
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Mercedes Gómez Valenzuela">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Docker</title>
+        <link rel="stylesheet" href="css/docker.css">
+    </head>
+    <body>
+        <h1>Merche987</h1>
+        <h2>Docker</h2>
+        <p>Subsistema de virtualización que comparte con el anfitrión el kernel y el
+            sistema de archivos. El anfitrión siempre es un sistema LInux. Si estamos en
+            WIndows o MAC, necesitaré una maquina virtual Windows virtualizada con
+            VirtualBox o similar.</p>
+        <p>Un software de maquinas virtuales necesita instalar el sistema operativo
+            completo. Ejemplos de sistemas de virtualización:</p>
+        <ul>
+            <li>Virtualbox (para multiples plataformas)</li>
+            <li>Hyper-V (para Windows)</li>
+            <li>Parallels (para MAC)</li>
+            <li>VMare (para multiples plataformas)</li>
+            <li>Qemu (para Linux)</li>
+            <li>XEN (para UNIX/LInux)</li>
+            <li>KUM (para UNIX/LInux)</li>
+        </ul>
+        <p>Un software de contenedores es un sistema de virtualización que comparte el
+            kernel con el anfitrión. Se basa en el concepto de microservicio, donde tengo
+            todos los programas instalados, configurados y funcionando, gracias a los
+            contenedores. Ejemplo de software de contenedores:</p>
+        <ul>
+            <li>Docker</li>
+            <li>LXD</li>
+            <li>Kubernetes</li>
+        </ul>
+        <img src="img/Diagrama1.png" alt="Diagrama">
+        <p>Para saber más sobre el tema:</p>
+        <ul>
+            <li>
+                <a href="https://www.docker.com/">Web oficial de Docker</a>
+            </li>
+            <li>
+                <a href="https://hub.docker.com/">Docker hub (listado contenedores)</a>
+            </li>
+            <li>
+                <a href="https://docs.docker.com/get-started/">Tutorial de Docker</a>
+            </li>
+        </ul>
+        <h1>Dockerfile</h1>
+        <p>Un Dockerfile es una receta para crear una imagen para una aplicación
+            particular de Docker. De este modo podemos tomar una imagen base, instalarle
+            programas, configurar esos programas y dejarla preparada para crear contenedores
+            a partir de ella.</p>
+        <p>Veamos un ejemplo:</p>
+        <pre>
+            # use phusion/baseimage as base image. from ubuntu:latest
+        </pre>
+        <pre>
+            # use baseimage-docker's init system. cmd ["/sbin/my_init"]
+        </pre>
+        <pre>
+            # install prerequisites run apt-get update; \ apt-get install -y udhcpd
+        </pre>
+        <pre>
+            # set up start up scripts run mkdir /etc/service/udhcpd add udhcpd.sh
+            /etc/service/udhcpd/run run chmod +x /etc/service/udhcpd/run
+        </pre>
+        <pre>
+            # clean up apt when done. run apt-get clean && rm -rf /var/lib/apt/lists/*
+            /tmp/* /var/tmp/*
+        </pre>
+        <pre>
+            # expose the port expose 67 expose 67/udp expose 68 expose 68/udp
+        </pre>
+        <pre>
+            # volumes volume /data</p>
+        <p>la línea “from ubuntu:latest” sirve para indicar la imagen base que queremos
+            usar para nuestro contenedor.</p>
+        <p>creamos el archivos udhcpd.conf</p>
+        <pre
+            ># the start and end of the ip lease block start 172.17.0.200 end 172.17.0.210
+        </pre>
+        <pre>
+            # the interface that udhcpd will use interface eth0 opt dns 192.168.18.3 8.8.8.8
+            option subnet 255.255.0.0 opt router 172.17.0.1 # opt wins 192.168.10.10
+        </pre>
+        <pre>
+            # option dns 129.219.13.81
+        </pre>
+        <pre>
+            # appended to above dns servers for a total of 3 option domain local option
+            lease 864000
         </p>
-        <p>
-            Un software de maquinas virtuales necesita instalar el sistema operativo completo. Ejemplos de sistemas de virtualización: 
-        </p>   
-            <ul>
-                <li>Virtualbox (para multiples plataformas)</li>
-                <li>Hyper-V (para Windows)</li>
-                <li>Parallels (para MAC)</li>
-                <li>VMare (para multiples plataformas)</li>
-                <li>Qemu (para Linux)</li>
-                <li>XEN (para UNIX/LInux)</li>
-                <li>KUM (para UNIX/LInux)</li>
-            </ul>
-        <p>
-            Un software de contenedores es un sistema de virtualización que comparte el kernel con el anfitrión. Se basa en el concepto de microservicio, donde tengo todos los programas instalados, configurados y funcionando, gracias a los contenedores.
-            Ejemplo de software de contenedores: 
-        </p>
-            <ul>
-                <li>Docker</li>
-                <li>LXD</li>
-                <li>Kubernetes</li>
-            </ul>
-            <p>
-                <img src="img/Diagrama1.png" alt="Docker vs Maquinas virtual">
-            </p>
-        </p>
-        <p>
-            Para saber más sobre el tema:
-        </p>
-            <ul>
-                <li><a href="https://www.docker.com/">Web oficial de Docker</a></li>
-                <li><a href="https://hub.docker.com/">Docker hub (listado contenedores)</a></li>
-                <li><a href="https://docs.docker.com/get-started/">Tutorial de Docker</a></li>
-            </ul>
-    </div>
-    </div>
-    <div id="dockerfile">
-        <h2>Dockerfile</h2>
-        <p>
-            Un <span class="destacado">Dockerfile</span> es una receta para crear una imagen para una aplicación particular de Docker. 
-            De este modo podemos tomar una imagen base, instalarle programas, configurar esos programas y dejarla preparada para crear 
-            contenedores a partir de ella.
-        </p>
-    </div>
+    </p>
+    <p>crear el contenedor:</p>
+    <p>docker build.</p>
+    <p>lanzar el contenedor: docker run -d --net=host -p 67:67 -p 67:67/udp -p 68:68
+        -p 68:68/udp --name=dhcpd -v "ruta al directorio udhcpd"/data ubuntu:latest</p>
+    <p>abrir terminal en contenedor: docker exec -ti nombre_contenedor /bin/bash</p>
 </body>
 </html>

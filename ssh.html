@@ -1,44 +1,224 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
 	<title></title>
-	<meta name="generator" content="LibreOffice 6.0.7.3 (Linux)"/>
+	<meta name="generator" content="LibreOffice 6.1.4.2 (Windows)"/>
 	<meta name="created" content="2019-10-31T13:15:44.630203959"/>
-	<meta name="changed" content="2019-11-08T13:42:04.616213780"/>
-	<style type="text/css">
-		h2.cjk { font-family: "Noto Sans CJK SC Regular" }
-		h2.ctl { font-family: "Lohit Devanagari" }
-	</style>
+	<meta name="changed" content="2019-11-11T17:17:54.776000000"/>
+	<link rel="stylesheet" href="css/ssh.css">
 </head>
-<body lang="es-ES" dir="ltr">
-<h1 align="center" style="font-style: normal"><font face="DejaVu Serif, serif"><font size="7" style="font-size: 36pt">SSH</font></font></h1>
-<h2 class="western">Ejercicio 2</h2>
-<p style="margin-bottom: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">1-
+
+<body lang="es-ES" dir="ltr"><h1 align="center" style="font-variant: normal; font-style: normal">
+<font face="DejaVu Serif, serif"><font size="7" style="font-size: 36pt">SSH</font></font></h1>
+<div>
+<h2 class="western"><font size="6" style="font-size: 22pt">Ejercicio
+1</font></h2>
+<p><font face="Liberation Serif, serif"><font size="4" style="font-size: 15pt">1-
+Busca informaci&oacute;n en Internet de como montar un servidor
+telnet, bien en Windows o bien en GNU/Linux.</font></font></p>
+<ul>
+	<li><p><span style="font-variant: normal"><font color="#000000"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Para
+	comenzar la instalaci&oacute;n abrimos la terminal y ejecutamos el
+	comando </span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#000000"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt"><span style="letter-spacing: normal"><i><span style="font-weight: normal">sudo
+	apt update </span></i></span></font></font></font></span><span style="font-variant: normal"><font color="#000000"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">para
+	actualizar</span></span></span></font></font></font></span> 
+	</p>
+</ul>
+<p><img src="img/1-1.png" name="Imagen13" align="left" width="577" height="462">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<ul>
+	<li><p><span style="font-variant: normal"><font color="#000000"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">A
+	continuaci&oacute;n &ldquo;Sudo apt-cache search telnetd&rdquo; para
+	buscar donde se ha guardo el telnetd</span></span></span></font></font></font></span>
+		</p>
+</ul>
+<p><img src="img/1-5.png" name="Imagen14" align="left" width="607" height="486">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<ul>
+	<li><p style="page-break-before: always"><span style="font-variant: normal"><font color="#000000"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Seguidamente
+	el comando &ldquo;</span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#000000"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt"><span style="letter-spacing: normal"><i><span style="font-weight: normal">sudo
+	apt install telnetd&rdquo; para instalar el telnetd.</span></i></span></font></font></font></span></p>
+</ul>
+<ul>
+	<li><p align="left" style="orphans: 2; widows: 2"><img src="img/1-2.png" name="Imagen15" align="left" width="613" height="491">
+  <br clear="left"/>
+</img>
+<span style="font-variant: normal"><font color="#000000"><font face="sans-serif"><font size="4" style="font-size: 14pt"><span style="letter-spacing: normal"><i><span style="font-weight: normal">Ejecutamos
+	el comando &ldquo;sudo etc/init.d/openbsd-inetd restart&rdquo; </span></i></span></font></font></font></span><span style="font-variant: normal"><font color="#000000"><font face="sans-serif"><font size="4" style="font-size: 14pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">para
+	reiniciar el telnet</span></span></span></font></font></font></span>
+		</p>
+</ul>
+<p><img src="img/1-3.png" name="Imagen16" align="left" width="764" height="611">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<ul>
+	<li><p><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal">&ldquo;</span></font></span><span style="font-variant: normal"><font color="#000000"><font face="sans-serif"><font size="3" style="font-size: 13pt"><span style="letter-spacing: normal"><i><span style="font-weight: normal">nmap
+	localhost&rdquo; nos ayudara a</span></i></span></font></font></font></span><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal">
+	</span></font></span><span style="font-variant: normal"><font color="#000000"><font face="sans-serif"><font size="3" style="font-size: 13pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">buscar
+	todos los programas parecidos a telnetd.</span></span></span></font></font></font></span></p>
+</ul>
+<p><img src="img/1-4.png" name="Imagen17" align="left" width="783" height="626">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<ul>
+	<li><p><span style="font-variant: normal"><font color="#000000"><font face="sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Para
+	comprobar que ha sido instalado correctamente nos iremos al terminal
+	de ubuntu y pondemos el comando telnet 192.168.18.202, si podemos
+	acceder estar&aacute; bien instalado.</span></span></span></font></font></font></span></p>
+</ul>
+<p><img src="img/1-6.png" name="Imagen18" align="left" width="744" height="427">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p><font size="4" style="font-size: 15pt">2- Una vez instalado lanza
+el sniffer wireshark y atrapa una conexion telnet. Indica que puertos
+utiliza tanto el servidor como el cliente, as&iacute; como los
+protocolos usados en las distintas capas.</font></p>
+<ul>
+	<li><p><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt"><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Nos
+	metemos en la terminal y ponemos el comando &ldquo;</span></span></span></font></span><font color="#000000"><span style="letter-spacing: normal"><i><span style="font-weight: normal">sudo
+	wireshark&rdquo;</span></i></span></font> y se los abrir&aacute;
+	dicha aplicaci&oacute;n.</font></font></p>
+</ul>
+<p><img src="img/1-7.png" name="Imagen19" align="left" width="756" height="423">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<ul>
+	<li><p><span style="font-variant: normal"><font color="#000000"><font face="Times New Roman"><font size="4" style="font-size: 14pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">En
+	la terminal poner </span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#000000"><font face="Times New Roman"><font size="4" style="font-size: 14pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">&ldquo;</span></span></span></font></font></font></span><font color="#000000"><font face="Times New Roman"><font size="4" style="font-size: 14pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">telnet</span></span></span></font></font></font><font color="#000000"><font face="Times New Roman"><font size="4" style="font-size: 14pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">d</span></span></span></font></font></font><font color="#000000"><font face="Times New Roman"><font size="4" style="font-size: 14pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">
+	192.168.18.202&rdquo;</span></span></span></font></font></font> <font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt">para
+	conectarnos a la raspberrypi</font></font></p>
+</ul>
+<p><img src="img/1-8.png" name="Imagen20" align="left" width="749" height="412">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<ul>
+	<li><p style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal">
+	<font color="#000000"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt">Nos
+	vamos wireshark, paramos el tr&aacute;fico que hemos generado y
+	buscamos telnet.</font></font></font></p>
+</ul>
+<p><img src="img/1-9.png" name="Imagen21" align="left" width="749" height="599">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<ul>
+	<li><p style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal">
+	<font color="#000000"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt">Pinchamos
+	en una de la direcciones telnet de nuestra ip 192.168.18.202. Le
+	damos clip derecho y pinchamos en follow, se nos abrir&aacute; una
+	pesta&ntilde;a en la que haremos clip en TCP Stream, donde nos
+	muestra los datos del flujo TCP </font></font></font>
+	</p>
+</ul>
+<p><img src="img/1-10.png" name="Imagen22" align="left" width="831" height="665">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p><span style="font-variant: normal"><font color="#000000"><font face="Liberation Serif, serif"><font size="4" style="font-size: 15pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">3-
+Indica los datos mas relevantes de cada capa.</span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal">
+</span></font></span>
+</p>
+<p><img src="img/1-11.png" name="Imagen23" align="left" width="829" height="664">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt">4-
+Calcula el tama&ntilde;o de cada capa, separando el payload de la
+cabecera. </font></font></font>
+</p>
+<p><img src="img/1-12.png" name="Imagen24" align="left" width="834" height="667">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p><span style="font-variant: normal"><font color="#000000"><font face="Liberation Serif, serif"><font size="4" style="font-size: 15pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">5-
+Comprueba que login y contrase&ntilde;a viajan en texto plano.</span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal">
+</span></font></span>
+</p>
+<p><img src="img/1-13.png" name="Imagen25" align="left" width="847" height="677">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p><span style="font-variant: normal"><font color="#000000"><font face="Liberation Serif, serif"><font size="4" style="font-size: 15pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">6-
+Crea en el equipo remoto un directorio, un archivo de texto y
+posteriormente borralos.</span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#000000"><span style="letter-spacing: normal">
+</span></font></span>
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><img src="img/1-14.png" name="Imagen26" align="left" width="844" height="480">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<h2 class="western"><img src="img/1-15.png" name="Imagen27" align="left" width="844" height="478">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</h2>
+</div>
+<div>
+<h2 class="western"><font size="6" style="font-size: 22pt">Ejercicio
+2</font></h2>
+<p style="margin-bottom: 0cm"><font face="Liberation Serif, serif"><font size="4" style="font-size: 15pt">1-
 Instala un servidor SSH en tu sistema GNU/Linux y comprueba que el
 puerto 22 esta en escucha.</font></font></p>
 <p style="margin-bottom: 0cm"><br/>
 
 </p>
-<p style="margin-bottom: 0cm"><img src="ssh_html_50ece8405b6e1ad2.png" name="Imagen1" align="left" width="550" height="363">
-  <br clear="left"/>
-</img>
-<br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm; font-variant: normal; font-style: normal">
-Para comprobar el puerto 22 realizaremos el comando “sudo nano
-etc/ssh/sshd_config”.</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><img src="ssh_html_ffba5c38b4ef2283.png" name="Imagen2" align="left" width="474" height="317">
+<p style="margin-bottom: 0cm"><img src="img/2-1.png" name="Imagen1" align="left" width="848" height="371">
   <br clear="left"/>
 </img>
 <br/>
@@ -50,7 +230,18 @@ etc/ssh/sshd_config”.</p>
 <p style="margin-bottom: 0cm"><br/>
 
 </p>
+<ul>
+	<li><p style="margin-bottom: 0cm; font-variant: normal; font-style: normal">
+	<font size="4" style="font-size: 14pt">Para comprobar el puerto 22
+	realizaremos el comando &ldquo;sudo nano etc/ssh/sshd_config&rdquo;.</font></p>
+</ul>
 <p style="margin-bottom: 0cm"><br/>
+
+</p>
+<p style="margin-bottom: 0cm"><img src="img/2-2.png" name="Imagen2" align="left" width="852" height="419">
+  <br clear="left"/>
+</img>
+<br/>
 
 </p>
 <p style="margin-bottom: 0cm"><br/>
@@ -59,19 +250,25 @@ etc/ssh/sshd_config”.</p>
 <p style="margin-bottom: 0cm"><br/>
 
 </p>
-<p style="margin-bottom: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">2-
+<p style="margin-bottom: 0cm"><br/>
+
+</p>
+<p style="margin-bottom: 0cm"><font face="Liberation Serif, serif"><font size="4" style="font-size: 15pt">2-
 Crea dos usuarios denominados usuario1 y usuario2, que vas a usarlos
 en el ejercicio.</font></font></p>
 <p style="margin-bottom: 0cm"><br/>
 
 </p>
-<p style="margin-bottom: 0cm">Para crear el usuario utilizaremos el
-comando “sudo adduser usuario 2” en nuestro caso será el 2 ya
-que mi compañera creará el 1.</p>
+<ul>
+	<li><p style="margin-bottom: 0cm"><font size="4" style="font-size: 14pt">Para
+	crear el usuario utilizaremos el comando &ldquo;sudo adduser usuario
+	2&rdquo; en nuestro caso ser&aacute; el 2 ya que mi compa&ntilde;era
+	crear&aacute; el 1.</font></p>
+</ul>
 <p style="margin-bottom: 0cm"><br/>
 
 </p>
-<p style="margin-bottom: 0cm"><img src="ssh_html_73f5bc9e62755956.png" name="Imagen3" align="left" width="526" height="299">
+<p style="margin-bottom: 0cm"><img src="img/2-3.png" name="Imagen3" align="left" width="865" height="367">
   <br clear="left"/>
 </img>
 <br/>
@@ -80,14 +277,11 @@ que mi compañera creará el 1.</p>
 <p style="margin-bottom: 0cm"><br/>
 
 </p>
-<p style="margin-bottom: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#3465a4">Con
-el comando ls /home podremos ver los usuarios que tenemos creados.</font>
-</font></font>
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><img src="ssh_html_bd0823695620e275.png" name="Imagen4" align="left" width="473" height="316">
+<ul>
+	<li><p style="margin-bottom: 0cm"><font color="#000000"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt">Con
+	el comando ls /home podremos ver los usuarios que tenemos creados.</font></font></font></p>
+</ul>
+<p style="margin-bottom: 0cm"><img src="img/2-4.png" name="Imagen4" align="left" width="915" height="487">
   <br clear="left"/>
 </img>
 <br/>
@@ -102,42 +296,12 @@ el comando ls /home podremos ver los usuarios que tenemos creados.</font>
 <p style="margin-bottom: 0cm"><br/>
 
 </p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">3-
+<p style="margin-bottom: 0cm"><font face="Liberation Serif, serif"><font size="4" style="font-size: 15pt">3-
 Comprueba que puedes acceder mediante ssh a esos usuarios.</font></font></p>
 <p style="margin-bottom: 0cm"><br/>
 
 </p>
-<p style="margin-bottom: 0cm"><img src="ssh_html_8c0caaadab853642.png" name="Imagen5" align="left" width="470" height="319">
+<p style="margin-bottom: 0cm"><img src="img/2-5.png" name="Imagen5" align="left" width="724" height="349">
   <br clear="left"/>
 </img>
 <br/>
@@ -146,12 +310,17 @@ Comprueba que puedes acceder mediante ssh a esos usuarios.</font></font></p>
 <p style="margin-bottom: 0cm"><br/>
 
 </p>
-<p style="margin-bottom: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">4-
+<p style="margin-bottom: 0cm"><font face="Liberation Serif, serif"><font size="4" style="font-size: 15pt">4-
 Cambia el puerto del servidor e intenta a acceder de nuevo.</font></font></p>
-<p style="margin-bottom: 0cm"><br/>
+<p style="margin-bottom: 0cm"><img src="img/2-6.png" name="Imagen7" align="left" width="831" height="416">
+  <br clear="left"/>
+</img>
+<br/>
 
 </p>
-<p style="margin-bottom: 0cm"><img src="ssh_html_216f78a14576df9b.png" name="Imagen7" align="left" width="392" height="259" border="0"/>
+<p style="margin-bottom: 0cm"><img src="img/2-7.png" name="Imagen6" align="left" width="900" height="363">
+  <br clear="left"/>
+</img>
 <br/>
 
 </p>
@@ -161,46 +330,29 @@ Cambia el puerto del servidor e intenta a acceder de nuevo.</font></font></p>
 <p style="margin-bottom: 0cm"><br/>
 
 </p>
+<p style="margin-bottom: 0cm"><font face="Liberation Serif, serif"><font size="4" style="font-size: 15pt">5-
+Cambia la configuraci&oacute;n del servidor para que puedas acceder
+al sistema con usuario1 y NO con usuario2.</font></font></p>
 <p style="margin-bottom: 0cm"><br/>
 
 </p>
 <p style="margin-bottom: 0cm"><br/>
 
 </p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><img src="ssh_html_cf58c67b8761b523.png" name="Imagen6" align="left" width="471" height="33" border="0"/>
+<ul>
+	<li><p style="margin-bottom: 0cm"><font color="#000000"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt">Utilizamos
+	el comando &ldquo;sudo nano /etc/ssh/sshd_config&rdquo;.</font></font>
+	</font>
+	</p>
+	<li><p style="margin-bottom: 0cm"><font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font size="4" style="font-size: 14pt">A&ntilde;adimos
+	al final de la p&aacute;gina &ldquo;AllowUsers pi usuario1&rdquo;
+	para que nos deje entrar con el usuario 1 y no con el 2.</font></font></font></font></p>
+	<p style="margin-bottom: 0cm"><font color="#000000"> </font>
+	</p>
+</ul>
+<p style="margin-bottom: 0cm"><img src="img/2-8.png" name="Imagen8" align="left" width="924" height="412">
+  <br clear="left"/>
+</img>
 <br/>
 
 </p>
@@ -210,64 +362,27 @@ Cambia el puerto del servidor e intenta a acceder de nuevo.</font></font></p>
 <p style="margin-bottom: 0cm"><br/>
 
 </p>
+<p style="margin-bottom: 0cm"><font face="Liberation Serif, serif"><font size="4" style="font-size: 15pt">6-
+Cambia la configuraci&oacute;n del servidor para que solo pueda
+acceder desde una IP determinada.</font></font></p>
 <p style="margin-bottom: 0cm"><br/>
 
 </p>
+<ul>
+	<li><p style="margin-bottom: 0cm"><font color="#000000"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt">Utilizamos
+	el comando &ldquo;sudo nano /etc/ssh/sshd_config&rdquo;. </font></font></font>
+	</p>
+	<li><p style="margin-bottom: 0cm"><font color="#000000"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt">A&ntilde;adimos
+	al final de la p&aacute;gina &ldquo;AllowUsers pi 192.168.18.74&rdquo;
+	para que solo nos permita entrar desde nuestro equipo. </font></font></font>
+	</p>
+</ul>
 <p style="margin-bottom: 0cm"><br/>
 
 </p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">5-
-Cambia la configuración del servidor para que puedas acceder al
-sistema con usuario1 y NO con usuario2.</font></font></p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><font color="#3465a4"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Utilizamos
-el comando “sudo nano /etc/ssh/sshd_config”. </font></font></font>
-</p>
-<p style="margin-bottom: 0cm"><font color="#3465a4"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Añadimos
-al final de la página “AllowUsers pi usuario1” para que nos deje
-entrar con el usuario 1 y no con el 2. </font></font></font>
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><img src="ssh_html_495a9d8d106bc255.png" name="Imagen8" align="left" width="596" height="285" border="0"/>
-<br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">6-
-Cambia la configuración del servidor para que solo pueda acceder
-desde una IP determinada.</font></font></p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><font color="#3465a4"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Utilizamos
-el comando “sudo nano /etc/ssh/sshd_config”. </font></font></font>
-</p>
-<p style="margin-bottom: 0cm"><font color="#3465a4"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Añadimos
-al final de la página “AllowUsers pi 192.168.18.74” para que
-solo nos permita entrar desde nuestro equipo. </font></font></font>
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><img src="ssh_html_858052fa3589795c.png" name="Imagen9" align="left" width="528" height="350" border="0"/>
+<p style="margin-bottom: 0cm"><img src="img/2-9.png" name="Imagen9" align="left" width="909" height="360">
+  <br clear="left"/>
+</img>
 <br/>
 
 </p>
@@ -277,7 +392,9 @@ solo nos permita entrar desde nuestro equipo. </font></font></font>
 <p style="margin-bottom: 0cm"><br/>
 
 </p>
-<p style="margin-bottom: 0cm"><br/>
+<p style="margin-bottom: 0cm"><img src="img/2-10.png" name="Imagen10" align="left" width="910" height="378" border="0"/>
+<br/>
+<br clear="left"/>
 
 </p>
 <p style="margin-bottom: 0cm"><br/>
@@ -292,144 +409,41 @@ solo nos permita entrar desde nuestro equipo. </font></font></font>
 <p style="margin-bottom: 0cm"><br/>
 
 </p>
+<p style="margin-bottom: 0cm"><font face="Liberation Serif, serif"><font size="4" style="font-size: 15pt">7-
+Captura con wireshark una conexi&oacute;n ssh, comprueba que login y
+contrase&ntilde;a van encriptada. Analiza cada una de las capas
+TCP/IP implicadas indicando los datos mas relevantes, adem&aacute;s
+del tama&ntilde;o de cada capa, separando datos y cabecera.</font></font></p>
 <p style="margin-bottom: 0cm"><br/>
 
 </p>
+<ul>
+	<li><p style="margin-bottom: 0cm"><font color="#000000"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt">Abrimos
+	el Wireshark, nos vamos a la terminal y lanzamos el comando &ldquo;ssh
+	pi@192.168.18.202 -p 2222&rdquo; para acceder a la raspberrypi.</font></font></font></p>
+	<li><p style="margin-bottom: 0cm"><font color="#000000"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt">Una
+	vez ya dentro volvemos al wireshark y buscamos &ldquo;SSH&rdquo;,
+	nos aparecer&aacute; muchos trafico, escogemos una y comprobamos que
+	est&aacute; encriptada. </font></font></font>
+	</p>
+</ul>
 <p style="margin-bottom: 0cm"><br/>
 
 </p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><img src="ssh_html_ce9f71f2df63d61d.png" name="Imagen10" align="left" width="551" height="368" border="0"/>
+<p style="margin-bottom: 0cm"><img src="img/2-11.png" name="Imagen11" align="left" width="916" height="621">
+  <br clear="left"/>
+</img>
 <br/>
 
 </p>
 <p style="margin-bottom: 0cm"><br/>
 
 </p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">7-
-Captura con wireshark una conexión ssh, comprueba que login y
-contraseña van encriptada. Analiza cada una de las capas TCP/IP
-implicadas indicando los datos mas relevantes, además del tamaño de
-cada capa, separando datos y cabecera.</font></font></p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><font color="#3465a4"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Abrimos
-el Wireshark, nos vamos a la terminal y lanzamos el comando “ssh
-pi@192.168.18.202 -p 2222” para acceder a la raspberrypi.</font></font></font></p>
-<p style="margin-bottom: 0cm"><font color="#3465a4"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Una
-vez ya dentro volvemos al wireshark y buscamos “SSH”, nos
-aparecerá muchos trafico, escogemos una y comprobamos que está
-encriptada. </font></font></font>
-</p>
-<p style="margin-bottom: 0cm"><img src="ssh_html_ff86c227a9f3ef79.png" name="Imagen11" align="left" width="614" height="416" border="0"/>
+<p style="margin-bottom: 0cm"><img src="img/2-12.png" name="Imagen12" align="left" width="680" height="544">
+  <br clear="left"/>
+</img>
 <br/>
-
-</p>
-<p style="margin-bottom: 0cm"><br/>
-
-</p>
-<p style="margin-bottom: 0cm"><img src="ssh_html_ebb4c1bfb4265c65.png" name="Imagen12" align="left" width="680" height="544" border="0"/>
-<br/>
-
 </p>
 </body>
+</div>
 </html>

@@ -1,0 +1,19 @@
+body{
+    background-image: url(../img/fondo_ssh.jpg);
+}
+h1{
+    color: orchid;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+    background-color: powderblue;
+}
+h2.cjk { 
+    font-family: "Noto Sans CJK SC Regular";
+}
+h2.ctl { 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+div{
+    border: 2px solid black;
+    border-collapse: collapse;
+}

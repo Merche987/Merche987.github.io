@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Mercedes Gómez Valenzuela">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SSH</title>
+    <link rel="stylesheet" href="css/ssh-2.css">
+</head>
+<body>
+    <h1>Merche987</h1>
+    <h2>SSH</h2>
+    <p>Ejercicio 1</p>
+    <p>1- Busca información en Internet de como montar un servidor telnet, bien en Windows o bien en GNU/Linux.</p>
+    <ul>
+        <li>Para comenzar la instalación abrimos la terminal y ejecutamos el comando sudo apt update para actualizar</li>
+        <img src="img/1-1.png" alt="imagen1">
+        <li>A continuación “Sudo apt-cache search telnetd” para buscar donde se ha guardo el telnetd</li>
+        <img src="img/1-2.png" alt="imagen2">
+        <li>Seguidamente el comando “sudo apt install telnetd” para instalar el telnetd.</li>
+        <img src="img/1-3.png" alt="imagen3">
+        <p>Seguidamente el comando “sudo apt install telnetd” para instalar el telnetd.</p>
+        <img src="img/1-4.png" alt="imagen4">
+        <li>“nmap localhost” nos ayudara a buscar todos los programas parecidos a telnetd.</li>
+        <img src="img/1-5.png" alt="imagen5">
+        <li>Para comprobar que ha sido instalado correctamente nos iremos al terminal de ubuntu y pondemos el comando telnet 192.168.18.202, si podemos acceder estará bien instalado.</li>
+        <img src="img/1-6.png" alt="imagen6">
+    </ul>
+    <p>2- Una vez instalado lanza el sniffer wireshark y atrapa una conexion telnet. Indica que puertos utiliza tanto el servidor como el cliente, así como los protocolos usados en las distintas capas.</p>
+    <ul>
+        <li>Nos metemos en la terminal y ponemos el comando “sudo wireshark” y se los abrirá dicha aplicación.</li>
+        <img src="img/1-7.png" alt="imagen7">
+    </ul>
+</body>
+</html>

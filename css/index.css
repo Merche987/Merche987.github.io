@@ -1,0 +1,62 @@
+body{  
+    background-image: url(../img/fondo_index.jpg);
+    background-size: 100%;
+    opacity: 10;
+}
+h1{
+    width: 50%;
+    background-color: green;
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: auto;
+    padding: 20px;
+}
+h2{
+    text-align: center;
+    color: white;
+    background-color: blue;
+    border-radius: 15px;
+    width: 50%;
+    margin: auto;
+    margin-top: 15px;
+}
+.menu ul{
+    list-style: none;
+    width: 100%;
+    float: left;
+    margin: 200px;
+    margin-top: 15px;
+}
+.menu ul li{
+    float: left;
+    width: 223px;
+    color: green;
+    border: 2px solid green;
+    text-align: center;
+}
+.menu ul li:hover{
+    color: white;
+    background-color:black;
+}
+#ssh{
+    width: 305px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#ftp{
+    width: 323px;
+}
+#ssh:hover{
+   -webkit-transform: scale(1.3);
+   transform: scale(1.3);
+}
+#ftp:hover{
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+#docker:hover{
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
