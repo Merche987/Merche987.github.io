@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Mercedes Gómez Valenzuela">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> OwnCloud</title>
+    <link rel="stylesheet" href="css/OwnCloud.css">
+</head>
+<body>
+    <h1>Instalación de OwnCloud en una Raspberry Pi</h1>
+    <p>Paso 1: Instalar el servicio Web Apache y PHP</p>
+    <ul>
+        <li>$ sudo apt update</li>
+        <img src="oc-1.png" alt="OwnCLoud1">
+        <li>$ sudo apt install apache2 php php-gd sqlite3 php-sqlite3 php-curl</li>
+        <img src="oc-2.png" alt="OwnCLoud2">
+    </ul>
+    <p>Paso 2:Descargar en la Raspberry el fichero Owncloud y descomprimir con el comando:</p>
+    <ul>
+        <li>cd ~/Downloads</li>
+        <li>wget https://download.owncloud.org/community/owncloud-10.3.1.tar.bz2</li>
+        <img src="oc-3.png" alt="OwnCLoud3">
+        <li>bunzip2 owncloud-10.3.1.tar.bz2</li>
+        <img src="oc-" alt="">
+        <li>tar xf owncloud-10.3.1.tar</li>
+        <img src="oc-4.png" alt="OwnCLoud4">
+        <li>sudo mv owncloud /var/www/html</li>
+        <img src="oc-5.png" alt="OwnCLoud5">
+        <li>cd /var/www/html</li>
+        <li>sudo chown -R www-data:www-data owncloud</li>
+        <img src="oc-6-png" alt="OwnCLoud6">
+        <li>sudo apt-get install php-zip php-xml php-fdomdocument php-intl php-mbstring</li>
+        <img src="oc-7.png" alt="OwnCLoud7">
+    </ul>
+</body>
+</html>

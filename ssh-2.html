@@ -10,7 +10,7 @@
 <body>
     <h1>Merche987</h1>
     <h2>SSH</h2>
-    <p>Ejercicio 1</p>
+    <p id="ejercicio1">Ejercicio 1</p>
     <p>1- Busca información en Internet de como montar un servidor telnet, bien en Windows o bien en GNU/Linux.</p>
     <ul>
         <li>Para comenzar la instalación abrimos la terminal y ejecutamos el comando sudo apt update para actualizar</li>
@@ -30,6 +30,60 @@
     <ul>
         <li>Nos metemos en la terminal y ponemos el comando “sudo wireshark” y se los abrirá dicha aplicación.</li>
         <img src="img/1-7.png" alt="imagen7">
+        <li>En la terminal poner “telnetd 192.168.18.202” para conectarnos a la raspberrypi</li>
+        <img src="img/1-8.png" alt="imagen8">
+        <li>Nos vamos wireshark, paramos el tráfico que hemos generado y buscamos telnet.</li>
+        <img src="img/1-9.png" alt="imagen9">
+        <li>Pinchamos en una de la direcciones telnet de nuestra ip 192.168.18.202. Le damos clip derecho y pinchamos en follow, se nos abrirá una pestaña en la que haremos clip en TCP Stream, donde nos muestra los datos del flujo TCP</li>
+        <img src="img/1-10.png" alt="imagen10">
+    </ul>
+    <p>3- Indica los datos mas relevantes de cada capa.</p>
+    <img src="img/1-11.png" alt="imagen11">
+    <p>4- Calcula el tamaño de cada capa, separando el payload de la cabecera.</p>
+    <img src="img/1-12.png" alt="imagen12">
+    <p>5- Comprueba que login y contraseña viajan en texto plano.</p>
+    <img src="img/1-13.png" alt="imagen13">
+    <p>6- Crea en el equipo remoto un directorio, un archivo de texto y posteriormente borralos.</p>
+    <img src="img/1-14.png" alt="imagen14">
+    <img src="img/1-15.png" alt="imagen15">
+    <p id="ejercicio2">Ejercicio 2</p>
+    <p>1- Instala un servidor SSH en tu sistema GNU/Linux y comprueba que el puerto 22 esta en escucha.</p>
+    <img src="img/1-16.png" alt="imagen16">
+    <ul>
+        <li>Para comprobar el puerto 22 realizaremos el comando “sudo nano etc/ssh/sshd_config”.</li>
+        <img src="img/1-17.png" alt="imagen17">
+    </ul>
+    <p>2- Crea dos usuarios denominados usuario1 y usuario2, que vas a usarlos en el ejercicio.</p>
+    <ul>
+        <li>Para crear el usuario utilizaremos el comando “sudo adduser usuario 2” en nuestro caso será el 2 ya que mi compañera creará el 1.</li>
+        <img src="img/1-18.png" alt="imagen18">
+        <li>Con el comando ls /home podremos ver los usuarios que tenemos creados.</li>
+        <img src="img/1-19.png" alt="imagen19">
+    </ul>
+    <p>3- Comprueba que puedes acceder mediante ssh a esos usuarios.</p>
+    <img src="img/1-19.png" alt="image19">
+    <p>4- Cambia el puerto del servidor e intenta a acceder de nuevo.</p>
+    <img src="img/1-20.png" alt="imagen20">
+    <img src="img/1-21.png" alt="imagen21">
+    <p>5- Cambia la configuración del servidor para que puedas acceder al sistema con usuario1 y NO con usuario2.</p>
+    <ul>
+        <li>Utilizamos el comando “sudo nano /etc/ssh/sshd_config”.</li>
+        <li>Añadimos al final de la página “AllowUsers pi usuario1” para que nos deje entrar con el usuario 1 y no con el 2.</li>
+        <img src="img/1-22.png" alt="imagen22">
+    </ul>
+    <p>6- Cambia la configuración del servidor para que solo pueda acceder desde una IP determinada.</p>
+    <ul>
+        <li>Utilizamos el comando “sudo nano /etc/ssh/sshd_config”.</li>
+        <li>Añadimos al final de la página “AllowUsers pi 192.168.18.74” para que solo nos permita entrar desde nuestro equipo.</li>
+        <img src="img/1-23.png" alt="imagen23">
+        <img src="img/1-24.png" alt="imagen24">
+    </ul>
+    <p>7- Captura con wireshark una conexión ssh, comprueba que login y contraseña van encriptada. Analiza cada una de las capas TCP/IP implicadas indicando los datos mas relevantes, además del tamaño de cada capa, separando datos y cabecera.</p>
+    <ul>
+        <li>Abrimos el Wireshark, nos vamos a la terminal y lanzamos el comando “ssh pi@192.168.18.202 -p 2222” para acceder a la raspberrypi.</li>
+        <li>Una vez ya dentro volvemos al wireshark y buscamos “SSH”, nos aparecerá muchos trafico, escogemos una y comprobamos que está encriptada.</li>
+        <img src="img/1-25.png" alt="imagen25">
+        <img src="img/1-26.png" alt="imagen26">
     </ul>
 </body>
 </html>

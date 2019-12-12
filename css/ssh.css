@@ -1,19 +1,31 @@
 body{
     background-image: url(../img/fondo_ssh.jpg);
+    background-size: 100%;
 }
 h1{
-    color: orchid;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    width: 100%;
-    background-color: powderblue;
+    width: 50%;
+    background-color: green;
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: auto;
+    padding: 15px;
 }
-h2.cjk { 
-    font-family: "Noto Sans CJK SC Regular";
+h2{
+    text-align: center;
+    background-color: blue;
+    color: white;
+    margin-top: 15px;
+    width: 50%;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 10px;
 }
-h2.ctl { 
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+img{
+    width: 70%;
+    margin: 15px;
 }
-div{
-    border: 2px solid black;
-    border-collapse: collapse;
+#ejercicio1 #ejercicio2{
+    font-size: 3em;
 }
