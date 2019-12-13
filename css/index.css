@@ -1,10 +1,10 @@
 body{  
-    background-image: url(../img/fondo_index.jpg);
+    background-image: url(../img/fondo_index2.jpg);
     background-size: 100%;
 }
 h1{
     width: 50%;
-    background-color: green;
+    background-color:black ;
     color: white;
     text-align: center;
     border-radius: 15px;
@@ -14,8 +14,8 @@ h1{
 }
 h2{
     text-align: center;
-    color: white;
-    background-color: blue;
+    color: black;
+    background-color: lightgray;
     border-radius: 15px;
     width: 50%;
     margin: auto;
@@ -31,9 +31,9 @@ h2{
 }
 .menu ul li{
     float: left;
-    width: 223px;
+    width: 225px;
     color: green;
-    border: 2px solid green;
+    border: 2px solid black;
     text-align: center;
 }
 .menu ul li:hover{
