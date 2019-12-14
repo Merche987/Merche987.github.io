@@ -3,8 +3,8 @@ body{
     background-size: 100%;
 }
 h2{
-    background-color: blue;
-    color: white;
+    color: black;
+    background-color: lightgray;
     width: 50%;
     margin: auto;
     text-align: center;
@@ -13,11 +13,14 @@ h2{
 }
 h1{
     width: 50%;
-    background-color: dodgerblue;
+    background-color:black ;
     color: white;
     text-align: center;
     border-radius: 15px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: auto;
     padding: 20px;
+}
+.link{
+    color: white;
 }

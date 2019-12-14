@@ -1,11 +1,11 @@
 body{
-    background-image: url(../img/fondo_ftp.jpeg);
+    background-image: url(../img/fondo_ftp.jpg);
     background-size: 100%;
 }
 h2{
     text-align: center;
-    background-color: blue;
-    color: white;
+    color: black;
+    background-color: lightgray;
     margin-top: 15px;
     width: 50%;
     border-radius: 15px;
@@ -14,7 +14,7 @@ h2{
 }
 h1{
     width: 50%;
-    background-color: dodgerblue;
+    background-color:black ;
     color: white;
     text-align: center;
     border-radius: 15px;
@@ -22,7 +22,13 @@ h1{
     margin: auto;
     padding: 20px;
 }
+.link{
+    color: white;
+}
 img{
     width: 70%;
     margin-top: 10px
+}
+p{
+    font-size: 25px
 }

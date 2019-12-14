@@ -4,23 +4,26 @@ body{
 }
 h1{
     width: 50%;
-    background-color: blueviolet;
+    background-color:black ;
     color: white;
     text-align: center;
     border-radius: 15px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: auto;
-    padding: 15px;
+    padding: 20px;
+}
+.link{
+    color:white;
 }
 h2{
     text-align: center;
-    background-color: blue;
-    color: white;
-    margin-top: 15px;
-    width: 50%;
+    color: black;
+    background-color: lightgray;
     border-radius: 15px;
+    width: 50%;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 15px;
+    clear: both;
 }
 img{
     width: 70%;
