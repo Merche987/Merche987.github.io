@@ -5,6 +5,9 @@ body{
 .margen{
     margin-left: 20px;
 }
+img{
+    margin: 15px;
+}
 h2{
     text-align: center;
     color: black;

@@ -48,6 +48,9 @@ h2{
 #ftp{
     width: 323px;
 }
+#HTTP{
+    width:307px ;
+}
 #ssh:hover{
    -webkit-transform: scale(1.3);
    transform: scale(1.3);
@@ -60,6 +63,8 @@ h2{
     -webkit-transform: scale(1.3);
     transform: scale(1.3);
 }
-#HTTP{
-    width:307px ;
+#HTTP:hover{
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
 }
+
